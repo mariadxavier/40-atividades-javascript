@@ -57,13 +57,14 @@ buttonCPFPoint.addEventListener('click', () => {
     alert('CPF: ' + auxCpfPoint);
 });
 
-//Atividade 10:
+//Atividade 10: (alterada após atividade 16, que exigia o uso da função 'somar' nesta)
 const buttonSoma = document.getElementById('buttonSoma');
 const soma1 = document.getElementById('soma1');
 const soma2 = document.getElementById('soma2');
 const resultadoSoma = document.getElementById('resultado-soma');
 const btnLimpar = document.getElementById('btnLimpar');
 
+/* antiga:
 buttonSoma.addEventListener('click', () =>{
     let auxSoma1 = parseFloat(soma1.value, 10);
     let auxSoma2 = parseFloat(soma2.value, 10);
@@ -74,7 +75,9 @@ buttonSoma.addEventListener('click', () =>{
         let resultado = auxSoma1 + auxSoma2;
         resultadoSoma.value += resultado; 
     }
-});
+}); 
+*/
+
 
 btnLimpar.addEventListener('click', () => {
     soma1.value = '';
@@ -123,3 +126,21 @@ btnResultado15.addEventListener('click', () => {
     resultado15.innerHTML = '<h2><b>SURPRESA!!</b></h2>';
 });
 
+//Atividade 16:
+
+function somar(valorA, valorB) {
+    let resultadoSoma = valorA + valorB;
+    return resultadoSoma;
+};
+
+// nova:
+buttonSoma.addEventListener('click', () =>{
+    let auxSoma1 = parseFloat(soma1.value, 10);
+    let auxSoma2 = parseFloat(soma2.value, 10);
+        
+    if((soma1.value == '' || soma1.value == null) || (soma2.value == '' || soma2.value == null)){
+        alert('Preencha os campos da soma corretamente para realizá-la. Caso deseje somar 0, insira o mesmo.');
+    } else {        
+        resultadoSoma.value += somar(auxSoma1, auxSoma2);
+    }
+}); 
