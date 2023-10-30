@@ -110,7 +110,16 @@ comentando várias linhas
 
 // Atividade 14:
 window.onload = function() {
-    const resultado14 = document.getElementById('resultado');
+    const resultado14 = document.getElementById('resultado14');
     resultado14.innerHTML = '<h2> <b>Esse texto foi inserido pelo JavaScript...</b></h2>'
 };
+
+// Atividade 15:
+const btnResultado15 = document.getElementById('btnResultado15');
+
+btnResultado15.addEventListener('click', () => {
+
+    const resultado15 = document.getElementById('resultado15');
+    resultado15.innerHTML = '<h2><b>SURPRESA!!</b></h2>';
+});
 
