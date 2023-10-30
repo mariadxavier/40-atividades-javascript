@@ -58,7 +58,6 @@ buttonCPFPoint.addEventListener('click', () => {
 });
 
 //Atividade 10:
-//if para verificar se há input nulo, se sim retornar alert
 const buttonSoma = document.getElementById('buttonSoma');
 const soma1 = document.getElementById('soma1');
 const soma2 = document.getElementById('soma2');
@@ -75,10 +74,32 @@ buttonSoma.addEventListener('click', () =>{
         let resultado = auxSoma1 + auxSoma2;
         resultadoSoma.value += resultado; 
     }
-})
+});
 
 btnLimpar.addEventListener('click', () => {
     soma1.value = '';
     soma2.value = '';
     resultadoSoma.value = '';
-})
+});
+
+//Atividade 11
+
+//Atividade 12:
+const btnChangeToGreen = document.getElementById('btnChangeToGreen');
+const btnChangeToRed = document.getElementById('btnChangeToRed');
+const btnResetColor = document.getElementById('btnResetColor');
+const divAlteraCor = document.getElementById('divAlteraCor');
+
+
+
+btnChangeToGreen.addEventListener('click', () => {
+    divAlteraCor.style = "background-color: rgb(63, 127, 47);";
+});
+
+btnChangeToRed.addEventListener('click', ()=> {
+    divAlteraCor.style = "background-color: rgb(165, 61, 42);";
+});
+
+btnResetColor.addEventListener('click', ()=> {
+    divAlteraCor.style = "background-color: rgb(42, 101, 165)";
+});
