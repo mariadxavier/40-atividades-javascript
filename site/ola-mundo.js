@@ -107,3 +107,10 @@ btnResetColor.addEventListener('click', ()=> {
 /* Atividade 13
 comentando várias linhas 
 */
+
+// Atividade 14:
+window.onload = function() {
+    const resultado14 = document.getElementById('resultado');
+    resultado14.innerHTML = '<h2> <b>Esse texto foi inserido pelo JavaScript...</b></h2>'
+};
+
