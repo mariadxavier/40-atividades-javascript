@@ -103,3 +103,7 @@ btnChangeToRed.addEventListener('click', ()=> {
 btnResetColor.addEventListener('click', ()=> {
     divAlteraCor.style = "background-color: rgb(42, 101, 165)";
 });
+
+/* Atividade 13
+comentando várias linhas 
+*/
