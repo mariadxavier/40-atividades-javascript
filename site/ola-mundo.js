@@ -144,3 +144,33 @@ buttonSoma.addEventListener('click', () =>{
         resultadoSoma.value += somar(auxSoma1, auxSoma2);
     }
 }); 
+
+// Atividade 17: Crie uma função que recebe 2 parâmetros e retorna a soma deles, porem caso seja passado um parâmetro vazio ela retorne zero.
+
+const btnSoma17 = document.getElementById('btnSoma17');
+const soma117 = document.getElementById('soma1-17');
+const soma217 = document.getElementById('soma2-17');
+const resultadoSoma17 = document.getElementById('resultado-soma-17');
+const btnLimpar17 = document.getElementById('btnLimpar17');
+
+function somarZero(valorA, valorB) {
+    let a = parseFloat(valorA);
+    let b = parseFloat(valorB);
+    let result = a + b;
+    if ((valorA == null || valorA == '')||(valorB == null || valorB == '')) {
+        result = 0;
+    }; 
+    return result;    
+};
+
+btnSoma17.addEventListener('click', () =>{
+    let auxSoma117 = soma117.value;
+    let auxSoma217 = soma217.value;
+    resultadoSoma17.value += somarZero(auxSoma117, auxSoma217);    
+}); 
+
+btnLimpar17.addEventListener('click', () => {
+    soma117.value = '';
+    soma217.value = '';
+    resultadoSoma17.value = '';
+});
