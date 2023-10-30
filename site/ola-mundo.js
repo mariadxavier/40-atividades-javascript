@@ -78,5 +78,7 @@ buttonSoma.addEventListener('click', () =>{
 })
 
 btnLimpar.addEventListener('click', () => {
+    soma1.value = '';
+    soma2.value = '';
     resultadoSoma.value = '';
 })
